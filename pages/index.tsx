@@ -2,8 +2,31 @@ import Head from 'next/head'
 import Banner from '../components/Banner'
 import Header from '../components/Header'
 import requests from '../utils/requests'
+import {Movie} from "../typings"
 
-const Home = ({netflixOriginals}) => {
+interface Props {
+  netflixOriginals: Movie[]
+  trendingNow: Movie[]
+  topRated: Movie[]
+  actionMovies: Movie[]
+  comedyMovies: Movie[]
+  horrorMovies: Movie[]
+  romanceMovies: Movie[]
+  documentaries: Movie[]
+  // products: Products[]
+}
+
+
+const Home = ({netflixOriginals,
+  actionMovies,
+  comedyMovies,
+  documentaries,
+  horrorMovies,
+  romanceMovies,
+  topRated,
+  trendingNow,
+  // products,
+ }:Props ) => {
   return (
     <div className={`relative h-screen bg-gradient-to-b from-gray-900/10 to-[#010511] lg:h-[140vh] ${
      '!h-screen overflow-hidden'
@@ -15,7 +38,7 @@ const Home = ({netflixOriginals}) => {
       
       <Header/>
     <main>
-      <Banner/>
+      <Banner netflixOriginals={netflixOriginals}/>
       <section>
       {/*Row */}
       {/*Row */}
