@@ -22,7 +22,6 @@ function Row({ title, movies }: Props) {
           ))}
           {/* <Thumbnail/> */}
         </div>
-
         <ChevronRightIcon className="absolute top-0 bottom-0 left-2 z-40 m-auto h-9 w-9 cursor-pointer opacity-0 transition hover:scale-125 group-hover:opacity-100" />
       </div>
     </div>
