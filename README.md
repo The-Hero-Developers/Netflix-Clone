@@ -130,4 +130,3 @@ $ yarn install
 
 Make sure that you have created the **.env.local** file, you can see the required variables inside .env.example file.
 
-
